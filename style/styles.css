@@ -1,0 +1,133 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.titulo-imagem {
+  width: 80%; /* Ajuste a largura conforme necessário */
+  max-width: 500px; /* Limita a largura máxima */
+  height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+}
+
+.imagem {
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jogo {
+  display: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.dropzone {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed #aaa;
+}
+
+.draggable {
+  width: 200px;
+  height: 200px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+}
+
+/* Adiciona uma margem superior ao botão */
+.inicio button {
+  margin-top: -15%;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.inicio button:hover {
+  transform: scale(1.2); /* Efeito de escala ao passar o mouse */
+}
+
+/* Estilo para o botão de imagem */
+.inicio button img {
+  width: 250px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+/* Estilos para o vídeo */
+.video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1; /* Para colocar o vídeo atrás dos outros elementos */
+}
+
+.fases {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.fases button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: calc((100% - 60px) / 3);
+  max-width: 200px;
+  height: auto;
+}
+
+.fases button:hover {
+  transform: scale(1.1);
+}
+
+.fases button img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Media query para ajustar o layout quando a tela for menor que 800px */
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column; /* Altera para uma coluna quando a tela for menor */
+    align-items: center; /* Centraliza os botões na coluna */
+  }
+}
+
+/* Animação para o logo */
+@keyframes mover {
+  0% { transform: translateY(-5px); }
+  50% { transform: translateY(5px); }
+  100% { transform: translateY(-5px); }
+}
+
+.titulo-imagem {
+  animation: mover 2s infinite; /* Aplica a animação ao logo */
+}

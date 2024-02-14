@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seleção de Fases</title>
+<link rel="stylesheet" href="/style/styles.css">
+</head>
+<body>
+  <h1>Jogo de Drag and Drop</h1>
+<div class="fases">
+  <div class="container">
+    <button onclick="iniciarFase(1)">
+      <img src="fase1.jpg" alt="Fase 1">
+    </button>
+    <button onclick="iniciarFase(2)">
+      <img src="fase2.jpg" alt="Fase 2">
+    </button>
+    <button onclick="iniciarFase(3)">
+      <img src="fase3.jpg" alt="Fase 3">
+    </button>
+    <button onclick="iniciarFase(4)">
+      <img src="fase4.jpg" alt="Fase 4">
+    </button>
+    <button onclick="iniciarFase(5)">
+      <img src="fase5.jpg" alt="Fase 5">
+    </button>
+    <button onclick="iniciarFase(6)">
+      <img src="fase6.jpg" alt="Fase 6">
+    </button>
+
+    <button onclick="Voltar()">
+      <img src="/media/BotaoPlay.png" alt="Voltar">
+    </button>
+  </div>
+</div>
+
+
+
+<!-- Adicionando o vídeo -->
+<video id="video" autoplay muted loop class="video">
+  <source src="/media/FundoInicial.mp4" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
