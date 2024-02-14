@@ -28,10 +28,14 @@ function drop(event) {
 
 
 function iniciarJogo() {
-  window.location.href = "fases.html"; // Redireciona para a página do jogo
+  document.body.classList.add("hide-pagina-inicial"); // Adiciona a classe para ocultar a página inicial
+  setTimeout(function() {
+    window.location.href = "fases.html"; // Redireciona para a página de fases após a animação
+  }, 500); // Tempo da animação em milissegundos
 }
 
+
 function Voltar() {
-  window.location.href = "intex.html";
+  window.location.href = "index.html";
 }
 
