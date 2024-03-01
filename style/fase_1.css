@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Cor de fundo mais suave */
+}
+
+.cena-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cena {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que as cenas quebrem para a próxima linha se necessário */
+  justify-content: center; /* Centralizar as cenas horizontalmente */
+}
+
+.bloco-cena {
+  width: 120px;
+  height: 120px;
+  border: 2px solid #333; /* Borda mais espessa para melhorar a visibilidade */
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* Fundo branco para contrastar com a borda */
+  border-radius: 10px; /* Bordas arredondadas para um visual mais moderno */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para levantar o bloco */
+  transition: all 0.3s ease; /* Transição suave para todos os estilos */
+}
+
+.bloco-cena:hover {
+  transform: translateY(-5px); /* Levantar o bloco ao passar o mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada ao passar o mouse */
+}
+
+.blocos-arrastaveis {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que os blocos arrastáveis quebrem para a próxima linha se necessário */
+  justify-content: center; /* Centralizar os blocos arrastáveis horizontalmente */
+  margin-top: 20px;
+}
+
+.bloco-arrastavel {
+  width: 120px;
+  height: 60px;
+  border: 2px solid #333; /* Borda mais espessa para melhorar a visibilidade */
+  margin: 10px;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  background-color: #f9f9f9; /* Fundo mais claro para contrastar com a borda */
+  border-radius: 10px; /* Bordas arredondadas para um visual mais moderno */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para levantar o bloco */
+  transition: all 0.3s ease; /* Transição suave para todos os estilos */
+}
+
+.bloco-arrastavel:hover {
+  transform: translateY(-5px); /* Levantar o bloco ao passar o mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada ao passar o mouse */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.titulo-fase {
+  margin-top: 0;
+}
+
+.pontuacao {
+  margin-bottom: 0;
+}
+
+.btn-voltar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}

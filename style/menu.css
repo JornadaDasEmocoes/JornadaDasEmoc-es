@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+body, html {
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+  width: 100%;
+  height: 90%;
+  position: relative;
+  transition: opacity 0.2s ease; /* Adiciona transição animada para a opacidade */
+}
+
+/* Estilos para o vídeo */
+.video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1; /* Para colocar o vídeo atrás dos outros elementos */
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 29px;
+  border-radius: 10px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  letter-spacing: .3rem;
+  border-color: #007bff;
+  border-style: groove;
+}
+
+.fases {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px 20px;
+    border-radius: 10px;
+
+}
+
+.fases button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: calc((100% - 80px) / 3);
+  max-width: 160px;
+  height: auto;
+  border-radius: 20px;
+  margin: 14px;
+}
+
+.fases button:hover {
+  transform: scale(1.1);
+}
+
+.fases button img {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+/* Media query para ajustar o layout quando a tela for menor que 800px */
+@media screen and (max-width: 800px) {
+    body, html {
+        margin: 0;
+        margin-top: 9px;
+        padding: 0;
+        width: 100%;
+        height: 90%;
+        position: relative;
+        transition: opacity 0.2s ease; /* Adiciona transição animada para a opacidade */
+      }
+
+      h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 90px;
+        border-radius: 10px;
+        font-family: "Pixelify Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        letter-spacing: .3rem;
+        border-color: #007bff;
+        border-style: groove;
+        width: 12%;
+      }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+        padding: 20px 20px;
+        border-radius: 10px;
+      
+    }
+
+    .fases button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        width: calc((100% - 80px) / 3);
+        max-width: 160px;
+        height: auto;
+        border-radius: 20px;
+        margin: 14px;
+      }
+
+    .fases button img {
+        background-color: #007bff;
+        width: 70%;
+        height: auto;
+        border-radius: 10px;
+      }
+}
+
+/* Animação para o logo */
+@keyframes mover {
+  0% { transform: translateY(-5px); }
+  50% { transform: translateY(5px); }
+  100% { transform: translateY(-5px); }
+}
+
+.titulo-imagem {
+  animation: mover 2s infinite; /* Aplica a animação ao logo */
+}

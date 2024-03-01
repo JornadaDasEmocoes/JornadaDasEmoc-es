@@ -9,11 +9,6 @@ body, html {
   transition: opacity 0.2s ease; /* Adiciona transição animada para a opacidade */
 }
 
-/* Esconde a página enquanto a transição está ocorrendo */
-body.hide-pagina-inicial .inicio {
-  opacity: 0;
-}
-
 .inicio {
   display: flex;
   flex-direction: column;
@@ -23,24 +18,12 @@ body.hide-pagina-inicial .inicio {
 }
 
 .titulo-imagem {
-  width: 80%; /* Ajuste a largura conforme necessário */
+  width: 90%; /* Ajuste a largura conforme necessário */
   max-width: 500px; /* Limita a largura máxima */
   height: auto; /* A altura será ajustada automaticamente para manter a proporção */
-  animation: mover 2s infinite; /* Aplica a animação ao logo */
-  margin: 1px;
 }
 
-.imagem {
-  width: 200%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.jogo {
-  display: none;
-}
-
-.container {
+.container{
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
@@ -63,7 +46,7 @@ body.hide-pagina-inicial .inicio {
 
 /* Adiciona uma margem superior ao botão */
 .inicio button {
-  margin-top: 5%;
+  margin-top: 2%;
   background: transparent;
   border: transparent;
   cursor: pointer;
@@ -71,14 +54,12 @@ body.hide-pagina-inicial .inicio {
 }
 
 .inicio button:hover {
-  transform: scale(1.2); /* Efeito de escala ao passar o mouse */
+  transform: scale(1.1); /* Efeito de escala ao passar o mouse */
 }
 
 /* Estilo para o botão de imagem */
 .inicio button img {
-  width: 60%;
-  height: auto;
-  border-radius: 10px; /* Ajuste o tamanho da imagem conforme necessário */
+  width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
 }
 
 /* Estilos para o vídeo */
@@ -91,64 +72,31 @@ body.hide-pagina-inicial .inicio {
   z-index: -1; /* Para colocar o vídeo atrás dos outros elementos */
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 29px;
-  border-radius: 10px;
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  letter-spacing: .3rem;
-  border-color: #007bff;
-  border-style: groove;
-}
-
-.fases {
+/* Media query para ajustar o layout quando a tela for menor que 800px */
+@media screen and (max-width: 800px) {
+  
+  .inicio {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 30%;
-}
+  height: 120%;
+  }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  padding: 20px 20px;
-  border-radius: 10px;
-
-}
-
-.fases button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  width: calc((100% - 60px) / 3);
-  max-width: 200px;
-  height: auto;
-  border-radius: 20px;
-  margin: 10px;
-}
-
-.fases button:hover {
-  transform: scale(1.1);
-}
-
-.fases button img {
-  width: 60%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Media query para ajustar o layout quando a tela for menor que 800px */
-@media screen and (max-width: 800px) {
   .container {
     align-items: center; /* Centraliza os botões na coluna */
+  }
+
+  .titulo-imagem {
+    width: 60%; /* Ajuste a largura conforme necessário */
+    max-width: 500px; /* Limita a largura máxima */
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+  }
+
+  /* Estilo para o botão de imagem */
+  .inicio button img {
+    width: 120px; /* Ajuste o tamanho da imagem conforme necessário */
+    padding: 50px;
   }
 }
 
@@ -157,4 +105,8 @@ h1 {
   0% { transform: translateY(-5px); }
   50% { transform: translateY(5px); }
   100% { transform: translateY(-5px); }
+}
+
+.titulo-imagem {
+  animation: mover 2s infinite; /* Aplica a animação ao logo */
 }
