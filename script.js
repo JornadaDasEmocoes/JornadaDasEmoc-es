@@ -1,3 +1,14 @@
+function iniciarJogo() {
+  document.body.classList.add("hide-pagina-inicial"); // Adiciona a classe para ocultar a página inicial
+  setTimeout(function() {
+    window.location.href = "fases.html"; // Redireciona para a página de fases após a animação
+  }, 500); // Tempo da animação em milissegundos
+}
+
+function Voltar() {
+  window.location.href = "index.html";
+}
+
 function allowDrop(event) {
   event.preventDefault();
 }
@@ -24,18 +35,5 @@ function drop(event) {
 
   // Adiciona o elemento arrastado na área de soltar
   dropzone.appendChild(draggableElement);
-}
-
-
-function iniciarJogo() {
-  document.body.classList.add("hide-pagina-inicial"); // Adiciona a classe para ocultar a página inicial
-  setTimeout(function() {
-    window.location.href = "fases.html"; // Redireciona para a página de fases após a animação
-  }, 500); // Tempo da animação em milissegundos
-}
-
-
-function Voltar() {
-  window.location.href = "index.html";
 }
 
