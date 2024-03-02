@@ -11,7 +11,7 @@ function iniciarJogo() {
 }
 
 function Voltar() {
-  window.location.href = "intex.html";
+  window.location.href = "index.html";
 }
 
 function fase1() {
