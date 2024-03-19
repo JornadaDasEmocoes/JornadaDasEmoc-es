@@ -2,7 +2,7 @@
 
 body, html {
   margin: 0;
-  margin-top: 30px;
+  margin-top: -50px;
   padding: 0;
   width: 100%;
   height: 90%;
@@ -38,11 +38,22 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 100px;
 }
+
+p {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center; /* Centraliza o texto horizontalmente */
+  margin: 0; /* Remove a margem padrão */
+  justify-content: center; /* Centraliza o texto verticalmente */
+  align-items: center; /* Centraliza o texto verticalmente */
+}
+
 
 .container {
   background-image: url("/media/fundoMenu.jpg");
-  display: flex;
   border-radius: 20px;
   border-style: outset;
   border-color:rgb(157, 66, 17);
@@ -50,21 +61,24 @@ h1 {
 }
 
 .fase {
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: end;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .fase button {
   border: none;
-  background-color: transparent;
+  background: transparent;
   cursor: pointer;
   transition: transform 0.2s ease;
   width: 150px;
   padding: 20px;
   border-radius: 20px;
-  margin: 0 auto 10px auto; /* Margens ajustadas para centralizar verticalmente e adicionar espaço abaixo */
+  margin: 10px; /* Margens ajustadas para centralizar verticalmente e adicionar espaço abaixo */
 }
 
 .fases button:hover {
@@ -72,16 +86,19 @@ h1 {
 }
 
 .fase button img {
-  width: 100%;
+  width: 110%;
   padding: 50px -30px;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
+.back button{
+  background: transparent;
+  border: transparent;
+}
 
-button img {
-  background-color: transparent;
-  width: 50%;
+.back button img {
   padding: 10px 10px;
+  width: 50%;
   height: auto;
   border-radius: 10px;
 }
@@ -113,27 +130,26 @@ button img {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      gap: 10px;
       padding: 20px 10px;
       border-radius: 10px;
   }
 
-  .fases button {
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-      width: calc((100% - 80px) / 3);
-      height: auto;
-      border-radius: 20px;
-      margin: 14px;
+  .fase button img {
+    width: 110%;
+    padding: 50px -30px;
+    border-radius: 20px;
   }
-
-  .fases button img {
-      background-color: #007bff;
-      width: 150%;
-      height: auto;
-      border-radius: 10px;
+  
+  .back button{
+    background: transparent;
+    border: transparent;
+  }
+  
+  .back button img {
+    padding: 10px 10px;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
   }
 }
 

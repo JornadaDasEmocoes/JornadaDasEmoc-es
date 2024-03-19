@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const blocosArrastaveis = document.querySelectorAll('.bloco-arrastavel');
   const blocosCena1 = document.querySelectorAll('.bloco-cena1');
   const blocosCena2 = document.querySelectorAll('.bloco-cena2');
+  const blocosCena3 = document.querySelectorAll('.bloco-cena3');
+  const blocosCena4 = document.querySelectorAll('.bloco-cena4');
   const btnVoltar = document.querySelector('.btn-voltar');
   let pontuacao = 0;
 
@@ -14,6 +16,14 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   blocosCena2.forEach(cena => {
+    cena.addEventListener('click', verificarEncaixe);
+  });
+
+  blocosCena3.forEach(cena => {
+    cena.addEventListener('click', verificarEncaixe);
+  });
+
+  blocosCena4.forEach(cena => {
     cena.addEventListener('click', verificarEncaixe);
   });
 
