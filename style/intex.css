@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 body, html {
+  background-image: url(/media/fundoIndex1.jpg);
+  background-repeat: no-repeat; /* Impede a repetição da imagem de fundo */
+  background-size:cover; /* Cobrirá todo o corpo */
+  background-position: center; /* Centraliza a imagem */
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 90%;
+  height: 100%;
   position: relative;
-  transition: opacity 0.2s ease; /* Adiciona transição animada para a opacidade */
+  transition: opacity 0.2s ease;
 }
 
 .inicio {
@@ -18,9 +22,10 @@ body, html {
 }
 
 .titulo-imagem {
-  width: 90%; /* Ajuste a largura conforme necessário */
-  max-width: 500px; /* Limita a largura máxima */
+  width: 80%; /* Ajuste a largura conforme necessário */
+  max-width: 400px; /* Limita a largura máxima */
   height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+  z-index: 2; /* Ajuste a ordem de sobreposição conforme necessário */
 }
 
 .container{
@@ -110,3 +115,11 @@ body, html {
 .titulo-imagem {
   animation: mover 2s infinite; /* Aplica a animação ao logo */
 }
+
+@keyframes moverAviao {
+  0% { left: -120px; top: 70%; transform: translate(-40%, -40%); } /* Inicia fora da tela à esquerda */
+  25% { left: 50%; top: 80%; } /* Move para cima */
+  100% {left: calc(180% - 220px); top: 60%; } /* Move para a direita e desce um pouco */
+}
+
+

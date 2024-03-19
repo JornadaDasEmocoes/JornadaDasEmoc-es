@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fase 1</title>
+<link rel="stylesheet" href="/style/fase_1.css">
+</head>
+<body>
+
+<div class="header">
+  <button onclick="voltar()" class="btn-voltar">Voltar</button>
+  <h1 class="titulo">Fase 4</h1>
+  <div class="pontuacao">Pontuação: <span id="pontuacao">0</span></div>
+</div>
+
+<div class="cena-container">
+  <div class="cena">
+    <div class="bloco-cena" id="cena1" data-valor="1">Cena 1</div>
+    <div class="bloco-cena" id="cena2" data-valor="2">Cena 2</div>
+    <div class="bloco-cena" id="cena3" data-valor="3">Cena 3</div>
+  </div>
+  <div class="cena">
+    <div class="bloco-cena" id="cena4" data-valor="4">Cena 4</div>
+  </div>
+</div>
+
+<div class="blocos-arrastaveis">
+  <div class="bloco-arrastavel" draggable="true" data-valor="1">Bloco 1</div>
+  <div class="bloco-arrastavel" draggable="true" data-valor="2">Bloco 2</div>
+  <div class="bloco-arrastavel" draggable="true" data-valor="3">Bloco 3</div>
+  <div class="bloco-arrastavel" draggable="true" data-valor="4">Bloco 4</div>
+</div>
+
+<script src="/js/script_1.js"></script>
+</body>
+</html>

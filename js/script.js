@@ -17,3 +17,23 @@ function Voltar() {
 function fase1() {
   window.location.href = "fase1.html";
 }
+
+function fase2() {
+  window.location.href = "fase2.html";
+}
+
+function fase3() {
+  window.location.href = "fase3.html";
+}
+
+function fase4() {
+  window.location.href = "fase4.html";
+}
+
+function fase5() {
+  window.location.href = "fase5.html";
+}
+
+function fase6() {
+  window.location.href = "fase6.html";
+}
