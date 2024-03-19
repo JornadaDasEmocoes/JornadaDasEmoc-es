@@ -3,8 +3,8 @@ botaoIniciar.addEventListener('click', iniciarJogo);
 botaoIniciar.addEventListener('touchstart', iniciarJogo);
 
 const botaoVoltar = document.querySelector('#botao-voltar');
-botaoVoltar = addEventListener('click', Voltar);
-botaoVoltar = addEventListener('touchstart', Voltar);
+botaoVoltar.addEventListener('click', Voltar);
+botaoVoltar.addEventListener('touchstart', Voltar);
 
 function iniciarJogo() {
   window.location.href = "fases.html"; // Redireciona para a página do jogo
